@@ -12,6 +12,7 @@
 		8CEBB7B6225D7AC600A8C493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CEBB7B4225D7AC600A8C493 /* Main.storyboard */; };
 		8CEBB7B8225D7ACE00A8C493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CEBB7B7225D7ACE00A8C493 /* Assets.xcassets */; };
 		8CEBB7BB225D7ACE00A8C493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CEBB7B9225D7ACE00A8C493 /* LaunchScreen.storyboard */; };
+		8CF19F2D225D8AFA00E3EBDC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF19F2C225D8AFA00E3EBDC /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		8CEBB7B7225D7ACE00A8C493 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CEBB7BA225D7ACE00A8C493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CEBB7BC225D7ACE00A8C493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CF19F2A225D8AD100E3EBDC /* CloudKitPractice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudKitPractice.entitlements; sourceTree = "<group>"; };
+		8CF19F2C225D8AFA00E3EBDC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CF19F2D225D8AFA00E3EBDC /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				8CEBB7AF225D7AC500A8C493 /* CloudKitPractice */,
 				8CEBB7AE225D7AC500A8C493 /* Products */,
+				8CF19F2B225D8AFA00E3EBDC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,7 @@
 		8CEBB7AF225D7AC500A8C493 /* CloudKitPractice */ = {
 			isa = PBXGroup;
 			children = (
+				8CF19F2A225D8AD100E3EBDC /* CloudKitPractice.entitlements */,
 				8CEBB7B0225D7AC600A8C493 /* AppDelegate.swift */,
 				8CEBB7B2225D7AC600A8C493 /* ViewController.swift */,
 				8CEBB7B4225D7AC600A8C493 /* Main.storyboard */,
@@ -62,6 +68,14 @@
 				8CEBB7BC225D7ACE00A8C493 /* Info.plist */,
 			);
 			path = CloudKitPractice;
+			sourceTree = "<group>";
+		};
+		8CF19F2B225D8AFA00E3EBDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CF19F2C225D8AFA00E3EBDC /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +110,14 @@
 				TargetAttributes = {
 					8CEBB7AC225D7AC500A8C493 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -282,6 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CloudKitPractice/CloudKitPractice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GY7BG2G9TC;
 				INFOPLIST_FILE = CloudKitPractice/Info.plist;
@@ -300,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CloudKitPractice/CloudKitPractice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GY7BG2G9TC;
 				INFOPLIST_FILE = CloudKitPractice/Info.plist;
